@@ -20,7 +20,7 @@ set(UTIL_C_SOURCES
 # ============================================================================ #
 # Set up as (static) library
 
-add_library(util STATIC ${UTIL_C_HEADERS} ${UTIL_C_SOURCES})
+add_library(cudd_util STATIC ${UTIL_C_HEADERS} ${UTIL_C_SOURCES})
 
-target_include_directories(util PUBLIC ${CMAKE_CURRENT_BINARY_DIR}
+target_include_directories(cudd_util PUBLIC ${CMAKE_CURRENT_BINARY_DIR}
                                        ${CMAKE_CURRENT_SOURCE_DIR})

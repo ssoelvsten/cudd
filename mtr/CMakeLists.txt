@@ -9,9 +9,9 @@ set(MTR_C_SOURCES
   #testmtr.c
 )
 
-add_library(mtr STATIC ${MTR_C_HEADERS} ${MTR_C_SOURCES})
+add_library(cudd_mtr STATIC ${MTR_C_HEADERS} ${MTR_C_SOURCES})
 
-target_link_libraries(mtr PRIVATE util)
+target_link_libraries(cudd_mtr PRIVATE cudd_util)
 
-target_include_directories(mtr PUBLIC ${CMAKE_CURRENT_BINARY_DIR}
+target_include_directories(cudd_mtr PUBLIC ${CMAKE_CURRENT_BINARY_DIR}
                                       ${CMAKE_CURRENT_SOURCE_DIR})

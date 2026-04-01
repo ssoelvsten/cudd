@@ -20,14 +20,14 @@ set(DDDMP_C_SOURCES
 )
 
 if (CUDD_SHARED)
-  add_library(dddmp SHARED ${DDDMP_C_HEADERS} ${DDDMP_C_SOURCES})
+  add_library(cudd_dddmp SHARED ${DDDMP_C_HEADERS} ${DDDMP_C_SOURCES})
 else()
-  add_library(dddmp STATIC ${DDDMP_C_HEADERS} ${DDDMP_C_SOURCES})
+  add_library(cudd_dddmp STATIC ${DDDMP_C_HEADERS} ${DDDMP_C_SOURCES})
 endif()
 
-target_link_libraries(dddmp PRIVATE util st mtr epd cudd)
+target_link_libraries(cudd_dddmp PRIVATE cudd_util cudd_st cudd_mtr cudd_epd cudd)
 
-target_include_directories(dddmp PUBLIC ${CMAKE_CURRENT_BINARY_DIR}
+target_include_directories(cudd_dddmp PUBLIC ${CMAKE_CURRENT_BINARY_DIR}
                                         ${CMAKE_CURRENT_SOURCE_DIR})
 
 set_target_properties(cudd PROPERTIES
