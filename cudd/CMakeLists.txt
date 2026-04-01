@@ -97,7 +97,7 @@ else()
   add_library(cudd STATIC ${CUDD_C_HEADERS} ${CUDD_CPP_HEADERS} ${CUDD_C_SOURCES} ${CUDD_CPP_SOURCES})
 endif()
 
-target_link_libraries(cudd PRIVATE epd mtr st util)
+target_link_libraries(cudd PRIVATE cudd_epd cudd_mtr cudd_st cudd_util)
 
 if (CUDD_STATS)
   target_compile_definitions(cudd PUBLIC DD_STATS)

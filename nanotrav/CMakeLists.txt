@@ -15,5 +15,5 @@ set(NANOTRAV_C_SOURCES
   main.c
 )
 
-add_executable(nanotrav ${NANOTRAV_C_HEADERS} ${NANOTRAV_C_SOURCES})
-target_link_libraries(nanotrav PRIVATE epd mtr st cudd util dddmp)
+add_executable(cudd_nanotrav ${NANOTRAV_C_HEADERS} ${NANOTRAV_C_SOURCES})
+target_link_libraries(cudd_nanotrav PRIVATE cudd_epd cudd_mtr cudd_st cudd cudd_util cudd_dddmp)
